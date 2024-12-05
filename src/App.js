@@ -1,25 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+const ContactForm = () => {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => setStatus("Form submitted successfully!"))
+      .catch((error) => setStatus("Failed to submit form!"));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form 
+  name="contact" 
+  method="POST" 
+  className="space-y-4 p-6 bg-gray-100 rounded-lg"
+  netlify
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <div>
+    <label className="block text-gray-700">Your Name:</label>
+    <input 
+      type="text" 
+      name="name" 
+      className="w-full p-2 border rounded-lg"
+      required 
+    />
+  </div>
+  <div>
+    <label className="block text-gray-700">Your Email:</label>
+    <input 
+      type="email" 
+      name="email" 
+      className="w-full p-2 border rounded-lg"
+      required 
+    />
+  </div>
+  <div>
+    <label className="block text-gray-700">Your Message:</label>
+    <textarea 
+      name="message" 
+      className="w-full p-2 border rounded-lg" 
+      required 
+    ></textarea>
+  </div>
+  <button 
+    type="submit" 
+    className="w-full bg-blue-500 text-white p-2 rounded-lg"
+  >
+    Send
+  </button>
+</form>
   );
-}
+};
 
-export default App;
+export default ContactForm;
