@@ -7,7 +7,7 @@ export default function App() {
   zIndex:1000,
    borderRadius: 50,
    padding: 10}} title="Chat with us on WhatsApp">
-    <img src={img1} style={{display:'block',height:40, width:40}} alt="WhatsApp" />
+    <img src={img1} style={{display:'block',height:60, width:60}} alt="WhatsApp" />
 </a>
 		{/* <!-- start preloader --> */}
 		<div className="preloader">
@@ -54,11 +54,11 @@ export default function App() {
 						<span className="icon icon-bar"></span>
 						<span className="icon icon-bar"></span>
 					</button>
-					<div className="navbar-brand" style={{textAlign: 'center',display: 'flex',flexDirection: 'row',justifyContent: 'center',alignItems: 'center'}}>
+					<a href='#top' className="navbar-brand" style={{textAlign: 'center',display: 'flex',flexDirection: 'row',justifyContent: 'center',alignItems: 'center'}}>
 						<div><img  style={{objectFit: 'contain',paddingBottom: '10px',height:'60px',width:'60px'}}  src="./images/logo.png"/></div>
 						<div><p>Tahiri Services</p></div>
 	
-					</div>
+					</a>
 				</div>
 				<div className="collapse navbar-collapse">
 					<ul className="nav navbar-nav navbar-right">
@@ -253,8 +253,15 @@ export default function App() {
     				<div className="col-md-12">
     					<h2 className="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">CONTACT <span>US</span></h2>
     				</div>
-    				
-    				<div className="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+    				<div className="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+            <div className='text-center'>
+            <img  style={{objectFit: 'contain',height:'auto',width:120,borderRadius:100}}  src="./images/topiwhite.png"/>
+            <h1>Tahiri Services</h1>
+            </div>
+            </div>
+            <div className="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s"></div>
+            <div className="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s"></div>
+    				<div className="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
     					<address>
     						<p className="address-title">CONTACTS</p>
     						<span>Feel free to Contact us.</span>
@@ -263,11 +270,11 @@ export default function App() {
     						<p><i className="fa fa-map-marker"></i> Kandiaro Sindh Pakistan 67050</p>
     					</address>
     					<ul className="social-icon">
-    						<li><h4>WE ARE SOCIAL</h4></li>
-    						<li><a href="facebook.com/7sajjadali" className="fa fa-facebook"></a></li>
-    						<li><a href="twitter.com/ten1live" className="fa fa-twitter"></a></li>
-    						<li><a href="instagram.com/7sajjadali" className="fa fa-instagram"></a></li>
-    						<li><a href="linkedin.com/in/ten3live" className="fa fa-linkedin"></a></li>
+    						<li><h4>WE ARE SOCIAL</h4></li><br></br>
+    					  <li><a href="https://facebook.com/7sajjadali" className="fa fa-facebook"></a></li>
+                            <li><a href="https://twitter.com/ten1live" className="fa fa-twitter"></a></li>
+                            <li><a href="https://instagram.com/7sajjadali" className="fa fa-instagram"></a></li>
+                            <li><a href="https://linkedin.com/in/ten3live" className="fa fa-linkedin"></a></li>
     					</ul>
     				</div>
     			</div>
