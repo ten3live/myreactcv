@@ -19,32 +19,46 @@ const ContactForm = () => {
 
   return (
     <form 
-      name="contact" 
-      method="POST" 
-      data-netlify="true" 
-      onSubmit={handleSubmit}
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label>
-          Your Name: <input type="text" name="name" required />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your Email: <input type="email" name="email" required />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your Message: <textarea name="message" required></textarea>
-        </label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-      {status && <p>{status}</p>}
-    </form>
+  name="contact" 
+  method="POST" 
+  className="space-y-4 p-6 bg-gray-100 rounded-lg"
+  netlify
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <div>
+    <label className="block text-gray-700">Your Name:</label>
+    <input 
+      type="text" 
+      name="name" 
+      className="w-full p-2 border rounded-lg"
+      required 
+    />
+  </div>
+  <div>
+    <label className="block text-gray-700">Your Email:</label>
+    <input 
+      type="email" 
+      name="email" 
+      className="w-full p-2 border rounded-lg"
+      required 
+    />
+  </div>
+  <div>
+    <label className="block text-gray-700">Your Message:</label>
+    <textarea 
+      name="message" 
+      className="w-full p-2 border rounded-lg" 
+      required 
+    ></textarea>
+  </div>
+  <button 
+    onClick={handleSubmit}
+    type="submit" 
+    className="w-full bg-blue-500 text-white p-2 rounded-lg"
+  >
+    Send
+  </button>
+</form>
   );
 };
 
