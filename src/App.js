@@ -4,7 +4,7 @@ export default function App() {
   return (<div id="top">
 <a href="https://wa.me/+923058452372?text=Hello%20I%20am%20interested%20in%20your%20services" target="_blank" class="whatsapp-button" style={{position: 'fixed',bottom: 60,
    right: 20,
- 
+  zIndex:1000,
    borderRadius: 50,
    padding: 10}} title="Chat with us on WhatsApp">
     <img src={img1} style={{display:'block',height:40, width:40}} alt="WhatsApp" />
