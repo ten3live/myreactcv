@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 
 const ContactForm = () => {
@@ -58,6 +59,7 @@ const ContactForm = () => {
   >
     Send
   </button>
+  <p>{status}</p>
 </form>
   );
 };
