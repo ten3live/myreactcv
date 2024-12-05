@@ -23,8 +23,9 @@ const ContactForm = () => {
   name="contact" 
   method="POST" 
   className="space-y-4 p-6 bg-gray-100 rounded-lg"
-  netlify
+  netlify netlify-honeypot="bot-field"
 >
+<input type="hidden" name="form-name" value="contact" />
   <input type="hidden" name="form-name" value="contact" />
   <div>
     <label className="block text-gray-700">Your Name:</label>
