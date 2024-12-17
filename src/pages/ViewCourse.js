@@ -6,9 +6,10 @@ export default function YouTubeVideos(props) {
   const [searchParams] = useSearchParams();
   const playlist = searchParams.get("id"); // Get the value of 'playlistid' query
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const youtubeURL = `/feeds/videos.xml?playlist_id=${playlist}`;
 
   useEffect(() => {
-    fetch(`/feeds/videos.xml?playlist_id=${playlist}`)
+    fetch(youtubeURL)
       .then((response) => response.text())
       .then((data) => {
         const parser = new DOMParser();
@@ -40,7 +41,7 @@ export default function YouTubeVideos(props) {
   return (
     <div className="flex row h-screen bg-gradient-to-r from-purple-900 to-indigo-700 justify-center pt-10 h-[100%] pb-10">
       {!selectedVideo && (
-        <div class="grid gap-6 grid-cols-3 p-10">
+        <div className="grid gap-6 grid-cols-3 p-10">
           {videos.map((video, index) => (
             <div
               key={index}
@@ -82,7 +83,7 @@ export default function YouTubeVideos(props) {
             </div>
           </div>
           <div className="flex justify-center items-start">
-            <div class="grid gap-6 grid-cols-3">
+            <div className="grid gap-6 grid-cols-3">
               {videos.map((video, index) => (
                 <div
                   key={index}
