@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { NavLink } from "react-router";
 import Typed from "typed.js";
 
 const MyComponent = () => {
@@ -46,15 +47,27 @@ export default function Home() {
               <div className="element">
                 <MyComponent />
               </div>
-              <a
-                data-scroll
-                href="#contact"
-                className="btn btn-default wow fadeInUp"
-                data-wow-offset="50"
-                data-wow-delay="0.6s"
-              >
-                Contact Us
-              </a>
+
+              <div className="flex justify-start gap-6">
+                <a
+                  data-scroll
+                  href="#contact"
+                  className="btn btn-default wow fadeInUp"
+                  data-wow-offset="50"
+                  data-wow-delay="0.6s"
+                >
+                  Contact Us
+                </a>
+                <NavLink
+                  data-scroll
+                  to="/courses"
+                  className="btn btn-default wow fadeInUp"
+                  data-wow-offset="50"
+                  data-wow-delay="0.6s"
+                >
+                  Courses
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
