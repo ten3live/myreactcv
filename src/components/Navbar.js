@@ -23,17 +23,7 @@ export default function Navbar() {
           alt="WhatsApp"
         />
       </a>
-      {/* <!-- start preloader --> */}
-      <div className="preloader">
-        <div className="sk-spinner sk-spinner-wave">
-          <div className="sk-rect1"></div>
-          <div className="sk-rect2"></div>
-          <div className="sk-rect3"></div>
-          <div className="sk-rect4"></div>
-          <div className="sk-rect5"></div>
-        </div>
-      </div>
-      {/* <!-- end preloader --> */}
+
       {/* <!-- start header --> */}
       <header>
         <div className="container">
