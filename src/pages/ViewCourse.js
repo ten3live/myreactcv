@@ -6,10 +6,12 @@ export default function YouTubeVideos(props) {
   const [searchParams] = useSearchParams();
   const playlist = searchParams.get("id"); // Get the value of 'playlistid' query
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const youtubeURL = `/feeds/videos.xml?playlist_id=${playlist}`;
+  const youtubeURL = `https://mahtabengineering.com/ytapi.php`;
 
   useEffect(() => {
-    fetch(youtubeURL)
+    fetch(`${youtubeURL}?playlist_id=${playlist}`, {
+      method: "GET", // or "POST" depending on your PHP setup
+    })
       .then((response) => response.text())
       .then((data) => {
         const parser = new DOMParser();
