@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import { NavLink } from "react-router";
 import Typed from "typed.js";
 
 const MyComponent = () => {
+
   const el = useRef(null);
 
   useEffect(() => {
@@ -178,7 +179,7 @@ export default function Home() {
       </div>
 
       {/* <!-- start portfolio --> */}
-      <div id="portfolio">
+      <div id="portfolio" className="bg-white">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -199,6 +200,7 @@ export default function Home() {
                 <img
                   src="images/alavish.png"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 1"
                 />
                 <div className="portfolio-overlay">
@@ -222,6 +224,7 @@ export default function Home() {
                 <img
                   src="images/better.png"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 2"
                 />
                 <div className="portfolio-overlay">
@@ -242,6 +245,7 @@ export default function Home() {
                 <img
                   src="images/aash.png"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 3"
                 />
                 <div className="portfolio-overlay">
@@ -262,6 +266,7 @@ export default function Home() {
                 <img
                   src="images/skwe.png"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 4"
                 />
                 <div className="portfolio-overlay">
@@ -282,6 +287,7 @@ export default function Home() {
                 <img
                   src="images/mahtab.png"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 3"
                 />
                 <div className="portfolio-overlay">
@@ -305,6 +311,7 @@ export default function Home() {
                 <img
                   src="images/sk.png"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 4"
                 />
                 <div className="portfolio-overlay">
@@ -328,6 +335,7 @@ export default function Home() {
                 <img
                   src="images/hmcc.jpg"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 1"
                 />
                 <div className="portfolio-overlay">
@@ -351,6 +359,7 @@ export default function Home() {
                 <img
                   src="images/hunza.png"
                   className="img-responsive portimg"
+                  style={{objectFit:'contain'}}
                   alt="portfolio img 2"
                 />
                 <div className="portfolio-overlay">

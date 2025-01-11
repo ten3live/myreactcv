@@ -24,11 +24,13 @@ export default function App() {
   }
   function Layout() {
     return (
-      <>
+      <div style={{display:"flex",justifyContent:'center',alignItems:'center',overflow:'hidden'}}>
+        <div style={{width:'100%'}}>
         <Navbar />
         <Outlet />
         <Footer />
-      </>
+        </div>
+      </div>
     );
   }
   return (

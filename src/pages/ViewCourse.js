@@ -41,7 +41,7 @@ export default function YouTubeVideos(props) {
   };
 
   return (
-    <div className="flex row h-screen bg-gradient-to-r from-purple-900 to-indigo-700 justify-center pt-10 h-[100%] pb-10">
+    <div className="flex row bg-gradient-to-r from-purple-900 to-indigo-700 justify-center pb-20 pt-20" style={{minHeight:600}}>
       {!selectedVideo && (
         <div className="grid gap-6 grid-cols-3 p-10">
           {videos.map((video, index) => (

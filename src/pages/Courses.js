@@ -5,9 +5,7 @@ export default function Home() {
   return (
     <div>
       {/* <!-- start team --> */}
-      <div id="team">
-        <div className="container">
-          <div className="row">
+      <div id="team" style={{display:'flex',justifyContent:'flex-start',alignItems:'flex-start'}}>
             <div id="service">
               <div className="container">
                 <div className="row">
@@ -24,7 +22,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7LNseSeZg5SpelXEiyQE0N8"}
                     to={"/course/?id=PLiGrFSAT1J7LNseSeZg5SpelXEiyQE0N8"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -35,7 +33,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7IidpRAXTCOmrg5bpDXAfTK"}
                     to={"/course/?id=PLiGrFSAT1J7IidpRAXTCOmrg5bpDXAfTK"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -47,7 +45,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7JNrovfmXZnPXvfB-wwc7yz"}
                     to={"/course/?id=PLiGrFSAT1J7JNrovfmXZnPXvfB-wwc7yz"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -64,7 +62,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7KLwW0cz4eD4UHDe0Ko7C7L"}
                     to={"/course/?id=PLiGrFSAT1J7KLwW0cz4eD4UHDe0Ko7C7L"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -81,7 +79,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7JAjZV8vOUuG6_zXtR15peP"}
                     to={"/course/?id=PLiGrFSAT1J7JAjZV8vOUuG6_zXtR15peP"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -94,7 +92,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7JNoA2amXl3BIyCsZnVwY1I"}
                     to={"/course/?id=PLiGrFSAT1J7JNoA2amXl3BIyCsZnVwY1I"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -108,7 +106,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7KLwW0cz4eD4UHDe0Ko7C7L"}
                     to={"/course/?id=PLiGrFSAT1J7KLwW0cz4eD4UHDe0Ko7C7L"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -121,7 +119,7 @@ export default function Home() {
                   <NavLink
                     newid={"PLiGrFSAT1J7JAjZV8vOUuG6_zXtR15peP"}
                     to={"/course/?id=PLiGrFSAT1J7JAjZV8vOUuG6_zXtR15peP"}
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -137,7 +135,7 @@ export default function Home() {
                   </NavLink>
 
                   <div
-                    className="col-md-3 wow fadeIn"
+                    className="col-md-3 col-sm-4 col-xs-6 wow fadeIn"
                     data-wow-offset="50"
                     data-wow-delay="0.6s"
                   >
@@ -152,8 +150,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+         </div>
   );
 }

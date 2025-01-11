@@ -1,10 +1,28 @@
-import React from "react";
-
+import React,{useState} from "react";
+import axios from 'axios'
 export default function Footer() {
+  const [name,setName]=useState("")
+  const [email,setemail]=useState("")
+  const [subject,setsubject]=useState("")
+  const [result,setresult]=useState("")
+  const [message,setmessage]=useState("")
+  const handleClick=async()=>{
+    const formdata={
+      name,
+      email,
+      subject,
+      message
+    }
+const data= await axios.post("https://tahiri.mahtabengineering.com/public/api/sendform",formdata);
+if(data.status==200){
+setresult("Form Submitted Successfully")
+}else{
+  setresult("Something went wrong please try again")
+}
+}
   return (
     <div>
-      {" "}
-      {/* <!-- start contact --> */}
+       {/* <!-- start contact --> */}
       <div id="contact">
         <div className="container">
           <div className="row">
@@ -22,29 +40,46 @@ export default function Footer() {
               data-wow-offset="50"
               data-wow-delay="0.6s"
             >
-              <div className="text-center">
-                <img
+              <div className="col-md-6 text-center justify-center align-center items-center text-center">
+                <div><img
                   style={{
-                    objectFit: "contain",
-                    height: "auto",
+                    height: 120,
                     width: 120,
                     borderRadius: 100,
                   }}
                   src="../images/topiwhite.png"
-                />
-                <h1>Tahiri Services</h1>
+                /></div>
+             
               </div>
             </div>
-            <div
+            {/* <div
               className="col-md-3 col-sm-6 col-xs-12 wow fadeInRight"
               data-wow-offset="50"
               data-wow-delay="0.6s"
-            ></div>
+            ></div> */}
             <div
-              className="col-md-3 col-sm-6 col-xs-12 wow fadeInRight"
+              className="col-md-6 col-sm-4 col-xs-12 wow fadeInRight"
               data-wow-offset="50"
               data-wow-delay="0.6s"
-            ></div>
+            >
+            <div>
+           
+              <label>Name</label>
+              <input name="name" type="text" value={name} className="form-control"onChange={(t)=>setName(t.target.value)} id="fullname"/>
+                          <label>Email</label>
+              <input name="email" type="email"value={email} className="form-control"onChange={(t)=>setemail(t.target.value)} id="email"/>
+                 
+                          <label>Subject</label>
+              <input name="subject" type="text"value={subject} className="form-control" id="subject"onChange={(t)=>setsubject(t.target.value)}/>
+                 
+                          <label>Message</label>
+              <textarea name="message" rows="4"value={message} className="form-control" id="message"onChange={(t)=>setmessage(t.target.value)}></textarea>
+              {result &&<div className="form-group" style={{backgroundColor:'tomato',padding:10,textAlign:'center'}}>
+              <h1 color="white">{result}</h1>
+              </div>}
+              <input type="submit" onClick={()=>handleClick()} name="submit" value="Send" className="form-control"/>
+            </div>
+             </div>
             <div
               className="col-md-3 col-sm-6 col-xs-12 wow fadeInRight"
               data-wow-offset="50"
