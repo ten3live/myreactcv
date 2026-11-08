@@ -587,17 +587,7 @@ export default function Portfolio() {
       </footer>
 
       {/* WhatsApp Floating Button */}
-      <LiquidGlass
-      config={{
-        material: 'ultra',
-        borderRadius: 24,
-        dynamicLighting: true,
-        chromaticAberration: 0.22,
-      }}
-      liquidPress={{ scale: 0.92, squish: 0.03 }}
-      animateIn={120}
-      className="command-glass"
-    >
+      
       <motion.a
         href="https://wa.me/923058452372"
         target="_blank"
@@ -610,7 +600,7 @@ export default function Portfolio() {
         title="Chat on WhatsApp"
       >
         <FaWhatsapp className="w-8 h-8" />
-      </motion.a></LiquidGlass>
+      </motion.a>
     </div>
   );
 }
