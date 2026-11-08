@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import logo from '../assets/logo.png'
 import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-
+import { LiquidGlass } from 'quick-liquid/react';
 // EmailJS Configuration
 const EMAILJS_PUBLIC_KEY = '0A4AVLKUKt6CzbM1G';
 const EMAILJS_SERVICE_ID = 'service_ydhg8qq';
@@ -53,6 +53,7 @@ export default function Portfolio() {
     }
   ];
 
+  
   const features = [
     'Expert Team of Developers',
     'Modern Technologies',
@@ -132,7 +133,8 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+      
+      <nav className="fixed top-0 left-0 right-0 text-white bg-black/30 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
            <div className='flex'><img src={logo} height={40} width={40}/><motion.div
@@ -142,25 +144,46 @@ export default function Portfolio() {
             >
               Tahiri Services
             </motion.div></div>
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex text-white items-center space-x-8">
               {['Home', 'Services', 'About', 'Contact'].map((item) => (
-                <button
+                <LiquidGlass
+      config={{
+        material: 'clear',
+       borderRadius: 24,
+        dynamicLighting: true,
+        chromaticAberration: 0.22,
+      }}
+      liquidPress={{ scale: 0.92, squish: 0.03 }}
+      animateIn={120}
+      className="command-glass"
+    ><button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-gray-700 hover:text-black transition-colors font-medium"
+                  className="text-white h-10 w-20 hover:text-red-500 transition-colors font-medium"
                 >
                   {item}
-                </button>
+                </button></LiquidGlass>
               ))}
-              <button
+              
+              <LiquidGlass
+      config={{
+        material: 'clear',
+        borderRadius: 24,
+        dynamicLighting: true,
+        chromaticAberration: 0.22,
+      }}
+      liquidPress={{ scale: 0.92, squish: 0.03 }}
+      animateIn={120}
+      className="command-glass"
+    ><button
                 onClick={() => scrollToSection('contact')}
-                className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors"
+                className=" text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors"
               >
                 Get Started
-              </button>
+              </button></LiquidGlass>
             </div>
             <button
-              className="md:hidden text-black"
+              className="md:hidden text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
@@ -197,6 +220,7 @@ export default function Portfolio() {
               >
                 Get Started
               </button>
+              
             </div>
           </motion.div>
         )}
@@ -212,7 +236,7 @@ export default function Portfolio() {
             loop
             muted
             playsInline
-            className="absolute mt-15 top-0 left-0 w-full h-full object-cover "
+            className="absolute top-0 left-0 w-full h-full object-cover "
             onError={() => {
               console.error('Video error occurred');
               setVideoError(true);
@@ -237,7 +261,8 @@ export default function Portfolio() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
+     
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -246,6 +271,7 @@ export default function Portfolio() {
               >
                 Transform Your Digital
               </motion.span>
+              
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -259,7 +285,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto"
+              className="text-sm md:text-md text-gray-200 mb-8 max-w-3xl mx-auto"
             >
               We build modern websites, mobile apps, and provide comprehensive digital services to help your business grow
             </motion.p>
@@ -267,20 +293,47 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex  flex-row gap-4 justify-center"
             >
-              <button
+              <LiquidGlass
+      config={{
+        material: 'thin',
+        borderRadius: 24,
+        dynamicLighting: true,
+        chromaticAberration: 0.22,
+      }}
+      liquidPress={{ scale: 0.92, squish: 0.03 }}
+      animateIn={120}
+      className="command-glass"
+    >
+      <button
                 onClick={() => scrollToSection('services')}
-                className="bg-black text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-800 transition-all hover:scale-105"
+                className=" text-white px-6 py-3 rounded-full font-medium text-lg hover:bg-gray-800 transition-all hover:scale-105"
               >
                 Our Services
               </button>
-              <button
+    </LiquidGlass>
+              <LiquidGlass
+      config={{
+        material: 'thin',
+        borderRadius: 24,
+        dynamicLighting: true,
+        chromaticAberration: 0.22,
+      }}
+      liquidPress={{ scale: 0.92, squish: 0.03 }}
+      animateIn={120}
+      className="command-glass"
+    >
+      <button
                 onClick={() => scrollToSection('contact')}
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white hover:text-black transition-all"
+                className=" text-white px-6 py-3 rounded-full font-medium text-lg hover:bg-white hover:text-black transition-all"
               >
                 Contact Us
               </button>
+    </LiquidGlass>
+
+              
+              
             </motion.div>
           </motion.div>
         </div>
@@ -339,6 +392,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
+              
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Us?</h2>
               <p className="text-xl text-gray-600 mb-8">
                 We are a team of passionate developers and designers dedicated to delivering exceptional digital solutions. With years of experience, we bring your ideas to life.
@@ -533,6 +587,17 @@ export default function Portfolio() {
       </footer>
 
       {/* WhatsApp Floating Button */}
+      <LiquidGlass
+      config={{
+        material: 'ultra',
+        borderRadius: 24,
+        dynamicLighting: true,
+        chromaticAberration: 0.22,
+      }}
+      liquidPress={{ scale: 0.92, squish: 0.03 }}
+      animateIn={120}
+      className="command-glass"
+    >
       <motion.a
         href="https://wa.me/923058452372"
         target="_blank"
@@ -541,11 +606,11 @@ export default function Portfolio() {
         animate={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50"
+        className="fixed bottom-6 right-6 bg-green-500/40 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50"
         title="Chat on WhatsApp"
       >
         <FaWhatsapp className="w-8 h-8" />
-      </motion.a>
+      </motion.a></LiquidGlass>
     </div>
   );
 }
