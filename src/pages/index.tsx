@@ -145,7 +145,7 @@ export default function Portfolio() {
               Tahiri Services
             </motion.div></div>
             <div className="hidden md:flex text-white items-center space-x-8">
-              {['Home', 'Services', 'About', 'Contact'].map((item) => (
+              {['Home', 'Services', 'About'].map((item) => (
                 <LiquidGlass
       config={{
         material: 'clear',
@@ -179,7 +179,7 @@ export default function Portfolio() {
                 onClick={() => scrollToSection('contact')}
                 className=" text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors"
               >
-                Get Started
+                Contact Us
               </button></LiquidGlass>
             </div>
             <button
@@ -199,7 +199,7 @@ export default function Portfolio() {
             className="md:hidden bg-white border-t border-gray-200 overflow-hidden"
           >
             <div className="px-6 py-4 space-y-4">
-              {['Home', 'Services', 'About', 'Contact'].map((item) => (
+              {['Home', 'Services', 'About'].map((item) => (
                 <button
                   key={item}
                   onClick={() => {
@@ -218,7 +218,7 @@ export default function Portfolio() {
                 }}
                 className="w-full bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
               >
-                Get Started
+                Contact Us
               </button>
               
             </div>
@@ -295,24 +295,7 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: 1.4 }}
               className="flex  flex-row gap-4 justify-center"
             >
-              <LiquidGlass
-      config={{
-        material: 'thin',
-        borderRadius: 24,
-        dynamicLighting: true,
-        chromaticAberration: 0.22,
-      }}
-      liquidPress={{ scale: 0.92, squish: 0.03 }}
-      animateIn={120}
-      className="command-glass"
-    >
-      <button
-                onClick={() => scrollToSection('services')}
-                className=" text-white px-6 py-3 rounded-full font-medium text-lg hover:bg-gray-800 transition-all hover:scale-105"
-              >
-                Our Services
-              </button>
-    </LiquidGlass>
+              
               <LiquidGlass
       config={{
         material: 'thin',
@@ -328,7 +311,7 @@ export default function Portfolio() {
                 onClick={() => scrollToSection('contact')}
                 className=" text-white px-6 py-3 rounded-full font-medium text-lg hover:bg-white hover:text-black transition-all"
               >
-                Contact Us
+                Get Started
               </button>
     </LiquidGlass>
 
